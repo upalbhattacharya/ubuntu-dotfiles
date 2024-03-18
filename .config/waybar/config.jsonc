@@ -1,0 +1,114 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "height": 28, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  // "spacing": 4, // Gaps between modules (4px)
+  "fixed-center": false,
+  "reload_style_on_change": true,
+  // Choose the order of the modules
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "sway/window"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/separatorleft",
+    "pulseaudio",
+    "custom/separatorleft2",
+    "custom/memory",
+    "custom/separatorleft3",
+    "cpu",
+    "custom/separatorleft4",
+    "temperature",
+    "custom/separatorleft5",
+    "battery",
+    "custom/separatorleft6",
+    "network",
+    "custom/separatorleft7",
+    "backlight",
+    "custom/separatorleft8",
+    "custom/clock"
+  ],
+  // Modules configuration
+  "sway/workspaces": {
+  "all-outputs": false,
+  "disable-scroll": true,
+  "format": "{icon}"
+},
+  "sway/window": {
+    "separate-outputs": true
+  },
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+  "custom/clock": {
+    "interval": 1,
+    "format": "{}",
+    "exec": "date +\"%Y-%m-%d %T\""
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "CPU: {usage:3}%",
+    "tooltip": false
+  },
+  "temperature": {
+    "thermal-zone": 0,
+    "critical-threshold": 100,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "TEMP: {temperatureC}°C"
+  },
+  "backlight": {
+    "device": "acpi_video1",
+    "format": "BCKL: {percent:3}%"
+  },
+  "battery": {
+    "format": "BAT: {capacity}%",
+    "format-charging": "CHG: {capacity}%",
+    "format-plugged": "PWR: {capacity}%"
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "NET: {signalStrength:3}%",
+    "format-ethernet": "NET:  eth",
+    "format-disconnected": "NET: Disc"
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "VOL: {volume:3}%",
+    "format-muted": "VOL: MUTE"
+  },
+  // Custom Modules
+  "custom/separatorleft": {
+    "format": ""
+  },
+  "custom/separatorleft2": {
+    "format": ""
+  },
+  "custom/separatorleft3": {
+    "format": ""
+  },
+  "custom/separatorleft4": {
+    "format": ""
+  },
+  "custom/separatorleft5": {
+    "format": ""
+  },
+  "custom/separatorleft6": {
+    "format": ""
+  },
+  "custom/separatorleft7": {
+    "format": ""
+  },
+  "custom/separatorleft8": {
+    "format": ""
+  },
+  "custom/memory": {
+    "interval": 10,
+    "format": "MEM: {}",
+    "exec": "free -h | awk 'FNR == 2 {print $6}'"
+  },
+}
