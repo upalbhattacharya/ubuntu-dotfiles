@@ -218,6 +218,9 @@ bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ 
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym --locked XF86AudioMicMute xec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+bindsym --locked Ctrl+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym --locked Ctrl+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
 # Swaylock
 bindsym Ctrl+Alt+l exec swaylock
 
