@@ -1,0 +1,3 @@
+profile only-laptop {
+  output "Unknown 0x09E5 0x00000000" mode 1920x1080@165.003Hz position 0,0
+}
