@@ -33,30 +33,25 @@ require("lazy").setup({
 	{ "neovim/nvim-lspconfig" },
 	{ "nvim-treesitter/nvim-treesitter" },
 	{
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
-		"hrsh7th/cmp-cmdline",
-		"hrsh7th/nvim-cmp",
-		"jose-elias-alvarez/null-ls.nvim",
+		"stevearc/conform.nvim",
+		opts = {},
 	},
+	{ "mfussenegger/nvim-lint" },
 	{
 		"danymat/neogen",
 		dependencies = "nvim-treesitter/nvim-treesitter",
 	},
 	{ "mbbill/undotree" },
-	-- LuaSnip
-	{
-		"L3MON4D3/LuaSnip",
-		"saadparwaiz1/cmp_luasnip",
-	},
 
 	-- Trouble
 	{
 		"folke/trouble.nvim",
 		dependencies = "nvim-tree/nvim-web-devicons",
 	},
-	{ "terrortylor/nvim-comment" },
+	{
+		"numToStr/Comment.nvim",
+		lazy = false,
+	},
 	{ "lukas-reineke/indent-blankline.nvim" },
 	{ "ggandor/leap.nvim" },
 

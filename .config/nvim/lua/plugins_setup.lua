@@ -1,5 +1,5 @@
 require("aerial").setup({
-	backends = { "treesitter", "lsp", "markdown", "man" },
+	backends = { "lsp", "markdown", "man" },
 	layout = {
 		min_width = 30,
 		win_opts = {},
@@ -19,7 +19,6 @@ require("aerial").setup({
 	autojump = true,
 })
 require("nvim-treesitter.configs").setup({
-	-- One of "all", "maintained" (parsers with maintainers), or a list of languages
 	ensure_installed = {
 		"python",
 		"markdown",
@@ -29,14 +28,8 @@ require("nvim-treesitter.configs").setup({
 		"yaml",
 		"bash",
 	},
-
-	-- Install languages synchronously (only applied to `ensure_installed`)
 	sync_install = true,
-
-	-- List of parsers to ignore installing
-
 	highlight = {
-		-- `false` will disable the whole extension
 		enable = true,
 	},
 })
@@ -44,7 +37,7 @@ require("nvim-treesitter.configs").setup({
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
-require("nvim_comment").setup()
+require("Comment").setup()
 
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")

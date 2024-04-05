@@ -61,8 +61,8 @@ vim.keymap.set("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", {
 })
 
 -- formatting
-vim.keymap.set("n", "<localleader>f", "<CMD>lua vim.lsp.buf.format({timeout_ms = 3000})<CR>", {
-	desc = "LSP format",
+vim.keymap.set("n", "<localleader>f", "<CMD>lua require('conform').format()<CR>", {
+	desc = "conform format",
 })
 
 -- neogen annotation/documentation
