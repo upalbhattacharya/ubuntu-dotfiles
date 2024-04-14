@@ -8,6 +8,8 @@ local neogen = require("neogen")
 require("lspconfig").lua_ls.setup({})
 require("lspconfig").pylsp.setup({})
 require("lspconfig").tsserver.setup({})
+require("lspconfig").texlab.setup({})
+require("lspconfig").bashls.setup({})
 
 require("conform").setup({
 	formatters_by_ft = {
@@ -17,6 +19,8 @@ require("conform").setup({
 		typescript = { "prettier" },
 		markdown = { "prettier" },
 		yaml = { "prettier" },
+		tex = { "latexindent" },
+		sh = { "shellcheck" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
@@ -26,6 +30,7 @@ require("conform").setup({
 })
 require("lint").linters_by_ft = {
 	python = { "pflake8" },
+	sh = { "shellcheck" },
 }
 
 neogen.setup({

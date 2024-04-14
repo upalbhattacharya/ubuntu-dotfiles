@@ -27,6 +27,7 @@ require("nvim-treesitter.configs").setup({
 		"javascript",
 		"yaml",
 		"bash",
+		"latex",
 	},
 	sync_install = true,
 	highlight = {
