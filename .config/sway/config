@@ -285,8 +285,8 @@ exec_always dunst
 exec_always /home/workboots/Utilities/battery_notify.sh
 
 exec_always {
-  pkill kanshi;
-  exec kanshi
+  pkill kanshi
+  kanshi &
 }
 
 
